@@ -28,7 +28,7 @@ export default function Topbar() {
     <div className="topbar">
       <div className="topbarWrapper">
         <div className="topLeft">
-          <span className="logo">Nhat Shop</span>
+          <span className="logo">Duong Shop</span>
         </div>
         <div className="topRight">
           <div className="topbarIconContainer">
