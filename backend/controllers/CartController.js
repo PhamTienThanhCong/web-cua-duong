@@ -119,6 +119,7 @@ const CartController = {
                 email: req.body.email,
                 phone: req.body.phone,
                 address: req.body.address,
+                note: req.body.note,
             }
             const newOrder = new Order({
                     userId: user.id,
@@ -143,7 +144,7 @@ const CartController = {
             return res.redirect('/login');
         }
         const id = sess.username.id;
-        const data = await Order.find({userId: id});
+        const data = await Order.find({userId: id}).sort({createdAt: -1});;
         res.render('pages/orderHistory', { data });
     },
 

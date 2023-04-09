@@ -53,6 +53,11 @@
 					</tr>
 				</thead>
 				<tbody>
+					<% if (data.length == 0) { %>
+						<tr>
+							<td colspan="6" class="text-center">No order</td>
+						</tr>
+					<% } %>
 					<% for (var i=0; i < data.length; i++) { %>
 						<tr class="text-center">
 							<td>
@@ -154,6 +159,7 @@
                 <p>Tên: <span>${data[index].userProfile.name}</span> </p>
                 <p>Số điện thoại: <span>${data[index].userProfile.phone}</span> </p>
                 <p>Địa chỉ: <span>${data[index].userProfile.address}</span> </p>
+				<p>note: <span>${data[index].userProfile.note}</span> </p>
 			`;
 			$('#orderDetailsModal .modal-body').html(orderDetails);
 			$('#orderDetailsModal').modal('show');
